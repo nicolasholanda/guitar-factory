@@ -1,6 +1,7 @@
 package com.guitarfactory.domain.entity;
 
 import com.guitarfactory.domain.enums.ComponentType;
+import com.guitarfactory.domain.enums.WoodType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,6 +26,9 @@ public class Component {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ComponentType componentType;
+
+    @Enumerated(EnumType.STRING)
+    private WoodType woodType;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal unitPrice;

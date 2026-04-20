@@ -1,0 +1,30 @@
+INSERT INTO components (name, component_type, wood_type, unit_price, description) VALUES
+('Alder Body Blank',         'BODY_BLANK', 'ALDER',    80.00,  'Premium alder tone wood blank'),
+('Mahogany Body Blank',      'BODY_BLANK', 'MAHOGANY', 120.00, 'Premium mahogany tone wood blank'),
+('Maple Body Blank',         'BODY_BLANK', 'MAPLE',    100.00, 'Premium maple tone wood blank'),
+('Ash Body Blank',           'BODY_BLANK', 'ASH',      90.00,  'Premium ash tone wood blank'),
+('Basswood Body Blank',      'BODY_BLANK', 'BASSWOOD', 60.00,  'Premium basswood tone wood blank'),
+('Walnut Body Blank',        'BODY_BLANK', 'WALNUT',   110.00, 'Premium walnut tone wood blank'),
+('Maple Neck',               'NECK',       'MAPLE',    150.00, 'Quartersawn maple neck'),
+('Mahogany Neck',            'NECK',       'MAHOGANY', 180.00, 'Mahogany neck with rounded profile'),
+('Rosewood Fretboard',       'FRETBOARD',  'ROSEWOOD', 50.00,  'Indian rosewood fretboard, 22 frets'),
+('Maple Fretboard',          'FRETBOARD',  'MAPLE',    40.00,  'Hard maple fretboard, 22 frets'),
+('Ebony Fretboard',          'FRETBOARD',  'EBONY',    70.00,  'African ebony fretboard, 22 frets'),
+('Single Coil Set',          'PICKUPS',    NULL,       120.00, 'Set of 3 vintage-voiced single coil pickups'),
+('Humbucker Set',            'PICKUPS',    NULL,       180.00, 'Set of 2 PAF-style humbuckers'),
+('P90 Set',                  'PICKUPS',    NULL,       140.00, 'Set of 2 P90 soapbar pickups'),
+('Standard Tuners 6-String', 'TUNERS',     NULL,       40.00,  '6-string die-cast machine heads'),
+('Standard Tuners 7-String', 'TUNERS',     NULL,       50.00,  '7-string die-cast machine heads'),
+('Standard Tuners 8-String', 'TUNERS',     NULL,       60.00,  '8-string die-cast machine heads'),
+('Standard Tuners 12-String','TUNERS',     NULL,       70.00,  '12-string die-cast machine heads'),
+('Standard Bridge',          'BRIDGE',     NULL,       60.00,  'Fixed hardtail bridge'),
+('Tremolo Bridge',           'BRIDGE',     NULL,       100.00, 'Synchronized tremolo bridge'),
+('Bone Nut',                 'NUT',        NULL,       15.00,  'Pre-slotted bone nut'),
+('6-String String Set',      'STRINGS',    NULL,       10.00,  'Nickel wound 10-46'),
+('7-String String Set',      'STRINGS',    NULL,       12.00,  'Nickel wound 10-59'),
+('8-String String Set',      'STRINGS',    NULL,       14.00,  'Nickel wound 10-74'),
+('12-String String Set',     'STRINGS',    NULL,       16.00,  'Nickel wound 12-string set'),
+('Standard Electronics Kit', 'ELECTRONICS',NULL,       30.00,  'Volume, tone pots, output jack and wiring harness');
+
+INSERT INTO inventory_items (component_id, quantity_in_stock)
+SELECT id, 50 FROM components;
