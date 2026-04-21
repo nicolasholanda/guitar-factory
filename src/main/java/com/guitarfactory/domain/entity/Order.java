@@ -34,6 +34,6 @@ public class Order {
 
     private LocalDateTime updatedAt;
 
-    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "order", fetch = FetchType.EAGER)
     private Guitar guitar;
 }

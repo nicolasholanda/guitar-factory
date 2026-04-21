@@ -43,7 +43,7 @@ public class OrderService {
 
         guitarFactoryService.buildGuitar(order, model, spec);
 
-        return order;
+        return orderRepository.findById(order.getId()).orElseThrow();
     }
 
     @Transactional(readOnly = true)

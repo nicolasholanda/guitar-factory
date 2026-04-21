@@ -23,11 +23,11 @@ public class Guitar {
     @Column(nullable = false, unique = true)
     private String serialNumber;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "model_id", nullable = false)
     private GuitarModel model;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "spec_id", nullable = false)
     private GuitarSpec spec;
 
