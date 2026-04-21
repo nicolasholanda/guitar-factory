@@ -15,4 +15,6 @@ public interface ComponentRepository extends JpaRepository<Component, Long> {
     Optional<Component> findByComponentTypeAndWoodType(ComponentType componentType, WoodType woodType);
 
     Optional<Component> findFirstByComponentTypeAndWoodTypeIsNull(ComponentType componentType);
+
+    Optional<Component> findFirstByComponentTypeAndNameContainingIgnoreCase(ComponentType componentType, String name);
 }
